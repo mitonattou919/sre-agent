@@ -54,7 +54,7 @@ Exposes Azure resource data as MCP tools via FastMCP.
 
 | Parameter | Type | Required | Description |
 |---|---|---|---|
-| `period` | str | Yes | `today` / `7d` / `30d` |
+| `period` | str | No | `today` / `7d` / `30d` (default: `7d`) |
 
 > `subscription_id` is NOT a parameter — same as above.
 
@@ -107,6 +107,7 @@ When Azure API calls fail:
 - **Framework**: Google ADK (`LlmAgent`)
 - **LLM**: Gemini 2.5 Flash (fixed for MVP)
 - **Session**: `InMemorySessionService` (MVP) — replaced by Storage Table in Phase 2
+  > **Constraint**: Sessions are stored in-process only. **Single-instance deployment is required.** Scaling to 2+ App Service instances will cause session loss. Migrate to Phase 2 (Storage Table) before any multi-instance scaling.
 - **System prompt**: Instructs the agent to adapt its response language to the user's language, and always format output in Markdown
 - **Tools**: Connected via `MCPToolset` (Streamable HTTP)
 
@@ -255,6 +256,7 @@ sre-agent/
 | `ENTRA_TENANT_ID` | Entra tenant ID | `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
 | `ENTRA_APP_CLIENT_ID` | App Registration client ID | `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
 | `SKIP_AUTH` | Skip Entra ID validation (local dev only) | `true` |
+| `MCP_FUNCTION_KEY` | Azure Functions access key (production only) | `xxxxxxxx...` |
 
 ### cli
 
