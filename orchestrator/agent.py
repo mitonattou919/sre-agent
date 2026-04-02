@@ -14,7 +14,7 @@ def build_agent() -> LlmAgent:
     """Create the LlmAgent with Gemini 2.5 Flash and MCP tools."""
     return LlmAgent(
         model="gemini-2.5-flash",
-        name="sre-agent",
+        name="sre_agent",
         description="SRE agent for Azure environments",
         instruction=_SYSTEM_PROMPT,
         tools=[build_mcp_toolset()],
