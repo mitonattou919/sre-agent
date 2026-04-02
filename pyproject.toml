@@ -5,6 +5,7 @@ requires-python = ">=3.13"
 dependencies = [
     # MCP Server
     "fastmcp>=2.0",
+    "azure-functions>=1.21",
     "azure-mgmt-monitor>=6.0",
     "azure-mgmt-costmanagement>=4.0",
     "azure-identity>=1.19",
