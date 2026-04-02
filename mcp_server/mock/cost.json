@@ -1,0 +1,17 @@
+{
+  "period": "7d",
+  "start_date": "2026-03-25",
+  "end_date": "2026-04-01",
+  "total_cost": 12453.80,
+  "currency": "JPY",
+  "by_service": [
+    { "service_name": "Azure App Service", "cost": 5230.50, "currency": "JPY" },
+    { "service_name": "Azure Functions",   "cost": 3120.00, "currency": "JPY" },
+    { "service_name": "Azure Storage",     "cost": 2103.30, "currency": "JPY" },
+    { "service_name": "Others",            "cost": 2000.00, "currency": "JPY" }
+  ],
+  "by_resource_group": [
+    { "resource_group": "rg-prod",    "cost": 10250.80, "currency": "JPY" },
+    { "resource_group": "rg-staging", "cost":  2203.00, "currency": "JPY" }
+  ]
+}

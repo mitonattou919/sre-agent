@@ -1,0 +1,41 @@
+[
+  {
+    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.AlertsManagement/alerts/aaaaaa",
+    "name": "High CPU on func-app-prod",
+    "severity": 0,
+    "severity_label": "Critical",
+    "state": "New",
+    "resource_id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-prod/providers/Microsoft.Web/sites/func-app-prod",
+    "resource_group": "rg-prod",
+    "resource_type": "microsoft.web/sites",
+    "description": "CPU usage exceeded 95% threshold for 5 consecutive minutes.",
+    "fired_at": "2026-04-01T08:45:00Z",
+    "resolved_at": null
+  },
+  {
+    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.AlertsManagement/alerts/bbbbbb",
+    "name": "Storage Throttling Detected",
+    "severity": 2,
+    "severity_label": "Warning",
+    "state": "New",
+    "resource_id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-prod/providers/Microsoft.Storage/storageAccounts/storageaccount01",
+    "resource_group": "rg-prod",
+    "resource_type": "microsoft.storage/storageaccounts",
+    "description": "Storage account is being throttled due to exceeding IOPS limits.",
+    "fired_at": "2026-04-01T07:30:00Z",
+    "resolved_at": null
+  },
+  {
+    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.AlertsManagement/alerts/cccccc",
+    "name": "Memory Pressure on orchestrator-app",
+    "severity": 1,
+    "severity_label": "Error",
+    "state": "Acknowledged",
+    "resource_id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-staging/providers/Microsoft.Web/sites/orchestrator-app",
+    "resource_group": "rg-staging",
+    "resource_type": "microsoft.web/sites",
+    "description": "Available memory dropped below 10% for 10 consecutive minutes.",
+    "fired_at": "2026-04-01T06:00:00Z",
+    "resolved_at": null
+  }
+]
